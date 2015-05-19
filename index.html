@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="app"> <!-- this is called a directive -->
+<head>
+  <title>angular tut</title>
+</head>
+<!-- With ng-init, you can initialize variables for use anywhere within the element to which it is applied. -->
+<body ng-init="names=['Dave','Joe','Larry','Moe']">
+<!--
+  <div class="container">
+    <ul>
+      <li ng-repeat="name in names">{{name}}</li>
+    </ul>
+  </div>
+ -->
+<!-- *********************************************** -->
+<!--   <input type="text" size="25" ng-model="coolBinding" placeholder="This input is bound to "> this: {{coolBinding}} -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- built in Js function -->
+  <!-- <p>{{"Angular" + "js".toUpperCase()}}</p> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- use a var from one set of delimiters in another set -->
+ <!--  <p>{{a = 1}} remains </p>
+  <p>{{a}}</p>
+ -->
+  <!-- The reverse breaks everything -->
+  <!-- <p>{{a}} remains {{a = 1}}</p> -->
+
+  <!-- Nope, doesn't work -->
+  <!-- <p>{{alert("Hello world")}}</p> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- Ternanry operator does work, Yay! -->
+  <!-- <p>There {{count = "monkey"; (count == 1 ? "is " : "are ") + count}} of them.</p> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- Change true to false and see what happens.OOOh, magic.  -->
+<!--   <p ng-init="authorized = true">
+    The secret code is
+    <span ng-show="authorized">0123</span>
+    <span ng-hide="authorized">not for you to see</span>
+  </p>
+
+  <p ng-init="allowed = true">
+    The secret code is
+    <span ng-show="allowed">0123</span>
+    <span ng-hide="allowed">not for you to see</span>
+    <br>
+    <input type="button" value="toggle" ng-click="allowed = !allowed">
+  </p> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+<!--   <!-- The value bound to a checkbox can be a string rather than a boolean if you set the ng-true-value and ng-false-value parameters. -->
+ <!--  <input type='checkbox' ng-init='feeling = "love it"' ng-model='feeling'
+    ng-true-value='"love it"' ng-false-value='"hate it"'>
+  is bound to
+  "<strong ng-bind="feeling"></strong>". Change it! -->
+<!-- *********************************************** -->
+
+
+<!-- CONTROLLERS Let's add our own module-->
+<!-- *********************************************** -->
+<!--   <p ng-controller="MessageController">
+    {{message}}
+  </p>
+
+  <p ng-controller="CountController">
+    There are {{count()}} months in a year.
+  </p>
+<!-- *************************************** --
+
+<!-- SCOPE kinda like 'this'-->
+<!-- *********************************************** -->
+  <!-- DOM elements outside the element where NameController is invoked have no access to the scope. -->
+ <!--  <div>
+    <p>
+      Outside the scope: {{name}}
+    </p>
+    <div ng-controller="NameController">
+      <p>
+        Inside the scope: {{name}}
+      </p>
+    </div>
+  </div> -->
+
+  <!-- $scope creates clear isolation -->
+ <!--  <p ng-controller="SecondNameController">
+    A rose by any other name is {{name}}
+  </p> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- <p ng-controller="SumController">
+    <select ng-model="newValue" ng-options="n for n in [1,2,3,4]"></select>
+    <input type="button" value="Add" ng-click="add()">
+    The sum of {{values}} is {{sum}}.
+  </p> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- <div ng-controller="EscapeController">
+    <input type="text" ng-model="message">
+    is bound to
+    "<strong ng-bind="message"></strong>".
+    Press <code>esc</code> to clear it!
+  </div> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+  <!-- Uses ngAnimate feature -->
+ <!--  <input type="checkbox" ng-model="showMessage">
+  Check the box to show the message
+  <h2 ng-show="showMessage">
+    The secret message.
+  </h2> -->
+<!-- *********************************************** -->
+
+
+<!-- *********************************************** -->
+<!-- ng-model="todo.completed" binds the input to that data -->
+<!-- <div class="todo" ng-controller="TodoController">
+  <ul>
+    <li ng-repeat="todo in todos">
+      <input type="checkbox" ng-model="todo.completed">
+      {{ todo.name }}
+    </li>
+  </ul>
+</div> -->
+<!-- *********************************************** -->
+
+
+
+<!-- *********************************************** -->
+  <!-- Set up a super simple service -->
+  <!-- <p ng-controller="ScoreController">
+    Score: {{score.points}}
+  </p>
+  <p ng-controller="ScoreController">
+    <button ng-click="increment()">Increment</button>
+  </p> -->
+<!-- *********************************************** -->
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="angular.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

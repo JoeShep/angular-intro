@@ -1,0 +1,40 @@
+.ng-hide-add,
+.ng-hide-remove {
+  transition: all linear 1s;
+  display: block !important;
+}
+
+.ng-hide-add.ng-hide-add-active,
+.ng-hide-remove {
+  opacity: 0;
+}
+
+.ng-hide-add,
+.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+  border: 1px solid red
+}
+
+body {
+  text-align: center;
+  margin-top: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin: 15px;
+  font-size: 20px;
+}
+
+.container li {
+  font-size: 20px;
+}
+
+.todo ul{
+  text-align: left;
+  width: 250px;
+  margin: 0 auto;
+}
